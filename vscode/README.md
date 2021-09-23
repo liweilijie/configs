@@ -48,7 +48,8 @@ brew install --cask font-fira-code
 shift+cmd+p 命令面板
 shift+option+f 格式化
 ctrl+] 转到实现
-ctrl+cmd+] 转到声明
+ctrl+cmd+] 转到定义
+ctrl+opt+] 转到声明
 ctrl+\,s 引用
 ctrl+cmd+\,s 所有引用
 cmd+/ 单行注释
