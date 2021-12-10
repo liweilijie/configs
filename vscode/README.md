@@ -47,8 +47,8 @@ brew install --cask font-fira-code
 ```text
 shift+cmd+p 命令面板
 shift+option+f 格式化
-ctrl+] 转到实现
-ctrl+cmd+] 转到定义
+ctrl+] 转到定义
+ctrl+cmd+] 转到实现
 ctrl+opt+] 转到声明
 ctrl+\,s 引用
 ctrl+cmd+\,s 所有引用
@@ -68,6 +68,7 @@ cmd+` 在同一个软件的多个工作区之间切换，很频繁
 cmd+shift+f 全局搜索代码，很常用
 cmd+p 在当前的项目工程里，全局搜索文件名
 cmd+f 在当前文件中搜索代码，渔村在搜索框里
+cmd+. 在做trait的时候自动补全导入
 ```
 
 #### 左右显示多个编辑器窗口
@@ -78,6 +79,19 @@ https://juejin.cn/post/6844903826063884296
 cmd+\ 打开多个编辑器窗口
 cmd+1 切换到左边的窗口
 cmd+2 切换到右边的窗口
+```
+
+#### 快速自动导入包
+
+比如输入一个`File`
+然后再`Ctrl+.` 然后找到`std::fs::File;`进行自动导入
+
+#### 自动补全Trait缺失实现的路径截短
+
+```rust
+// 利用Cmd+.进行导入缺失的
+impl Display for Man {
+}
 ```
 
 #### 高阶设置
@@ -99,3 +113,14 @@ cmd+2 切换到右边的窗口
 - Aa: 大小写敏感
 - Ab: 全字匹配
 - .*: 正则匹配
+
+
+#### 学习
+
+## 放弃的原因
+
+- 全局搜索不显眼
+- 当一个函数跳转到其定义之后，如果在里面移动了，你需要返回的话，ctrl+-
+  居然是一行一行返回的，这是因为与vim的快捷键冲突了，具体是哪儿冲突了我还没有找到。
+
+- [rust ra](https://zhuanlan.zhihu.com/p/218098514)
